@@ -1,0 +1,65 @@
+{
+  "header": {
+    "subtitle": "SYSTÈME DE CONTRÔLE DE DONNÉES SDV UI-KIT GIS",
+    "home": "Accueil",
+    "page2": "Page Fonction 2",
+    "page3": "Page Fonction 3",
+    "page4": "Page Fonction 4",
+    "edition": "Informations d'Édition",
+    "menu": "Menu",
+    "language": "Langue"
+  },
+  "sidebar": {
+    "ranking": "Classement",
+    "projectName": "Nom du Projet",
+    "trendAnalysis": "Analyse des Tendances",
+    "parameterA": "Paramètre A",
+    "parameterB": "Paramètre B",
+    "dataStatistics": "Statistiques de Données"
+  },
+  "dashboard": {
+    "networkMap": "Visualisation du Réseau",
+    "progressStats": "Statistiques de Progression",
+    "virtualLab": "Laboratoire Virtuel"
+  },
+  "progress": {
+    "title": "Progression de Formation",
+    "lastUpdated": "Dernière Mise à Jour",
+    "completion": "Taux d'Achèvement",
+    "engagement": "Taux d'Engagement"
+  },
+  "lab": {
+    "title": "Environnement de Laboratoire Virtuel",
+    "start": "Démarrer Lab",
+    "launch": "Lancer Lab",
+    "loading": "Chargement...",
+    "completed": "Terminé",
+    "locked": "Verrouillé",
+    "available": "Disponible",
+    "description": "Lancez le laboratoire virtuel pour pratiquer les configurations de sécurité dans un environnement sûr.",
+    "activeSession": "Session de Lab Active",
+    "close": "Fermer Lab",
+    "securityNotice": "Ceci est un environnement sandbox sécurisé. Toutes les actions sont isolées.",
+    "virtualLabTitle": "Environnement de Laboratoire Virtuel",
+    "loadingEnvironment": "Chargement de l'environnement du laboratoire...",
+    "instructions": "Suivez les instructions dans l'environnement du laboratoire pour compléter les exercices. Votre progression sera automatiquement sauvegardée."
+  },
+  "status": {
+    "gpuPrice": "Prix GPU",
+    "corePrice": "Prix CORE",
+    "highPerf": "Haute Performance",
+    "bestStock": "MEILLEURE ACTION"
+  },
+  "profile": {
+    "name": "NOM",
+    "position": "POSITION",
+    "progress": "PROGRÈS IA",
+    "contact": "CONTACT",
+    "actionTracking": "Suivi des Actions",
+    "duty": "Fonction",
+    "movementTrend": "Tendance de Mouvement",
+    "dataStats": "Statistiques",
+    "illustration": "Illustration",
+    "dataDelivery": "Livraison de Données"
+  }
+}

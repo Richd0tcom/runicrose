@@ -1,0 +1,65 @@
+{
+  "header": {
+    "subtitle": "SDV UI-KIT GIS BIGDATA CONTROL SYSTEM",
+    "home": "Home",
+    "page2": "Function Page 2",
+    "page3": "Function Page 3",
+    "page4": "Function Page 4",
+    "edition": "Edition Information",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "sidebar": {
+    "ranking": "Ranking",
+    "projectName": "Project Name",
+    "trendAnalysis": "Trend Analysis",
+    "parameterA": "Parameter A",
+    "parameterB": "Parameter B",
+    "dataStatistics": "Data Statistics"
+  },
+  "dashboard": {
+    "networkMap": "Network Visualization",
+    "progressStats": "Progress Statistics",
+    "virtualLab": "Virtual Lab"
+  },
+  "progress": {
+    "title": "Training Progress",
+    "lastUpdated": "Last Updated",
+    "completion": "Completion Rate",
+    "engagement": "Engagement Rate"
+  },
+  "lab": {
+    "title": "Virtual Lab Environment",
+    "start": "Start Lab",
+    "launch": "Launch Lab",
+    "loading": "Loading...",
+    "completed": "Completed",
+    "locked": "Locked",
+    "available": "Available",
+    "description": "Launch the virtual lab to practice security configurations in a safe environment.",
+    "activeSession": "Active Lab Session",
+    "close": "Close Lab",
+    "securityNotice": "This is a secure sandbox environment. All actions are isolated.",
+    "virtualLabTitle": "Virtual Lab Environment",
+    "loadingEnvironment": "Loading lab environment...",
+    "instructions": "Follow the instructions in the lab environment to complete the exercises. Your progress will be automatically saved."
+  },
+  "status": {
+    "gpuPrice": "GPU Price",
+    "corePrice": "CORE Price",
+    "highPerf": "High Performance",
+    "bestStock": "THE BEST STOCK"
+  },
+  "profile": {
+    "name": "NAME",
+    "position": "POSITION",
+    "progress": "AI PROGRESS",
+    "contact": "CONTACT",
+    "actionTracking": "Action Tracking",
+    "duty": "Duty",
+    "movementTrend": "Movement Trend",
+    "dataStats": "Data Statistics",
+    "illustration": "Illustration",
+    "dataDelivery": "Data Delivery"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "header": {
+    "subtitle": "نظام التحكم في البيانات الضخمة SDV UI-KIT GIS",
+    "home": "الرئيسية",
+    "page2": "صفحة الوظائف 2",
+    "page3": "صفحة الوظائف 3",
+    "page4": "صفحة الوظائف 4",
+    "edition": "معلومات الإصدار",
+    "menu": "القائمة",
+    "language": "اللغة"
+  },
+  "sidebar": {
+    "ranking": "التصنيف",
+    "projectName": "اسم المشروع",
+    "trendAnalysis": "تحليل الاتجاهات",
+    "parameterA": "المعامل أ",
+    "parameterB": "المعامل ب",
+    "dataStatistics": "إحصائيات البيانات"
+  },
+  "dashboard": {
+    "networkMap": "تصور الشبكة",
+    "progressStats": "إحصائيات التقدم",
+    "virtualLab": "المختبر الافتراضي"
+  },
+  "progress": {
+    "title": "تقدم التدريب",
+    "lastUpdated": "آخر تحديث",
+    "completion": "معدل الإكمال",
+    "engagement": "معدل المشاركة"
+  },
+  "lab": {
+    "title": "بيئة المختبر الافتراضي",
+    "start": "بدء المختبر",
+    "launch": "إطلاق المختبر",
+    "loading": "جاري التحميل...",
+    "completed": "مكتمل",
+    "locked": "مقفل",
+    "available": "متاح",
+    "description": "قم بتشغيل المختبر الافتراضي لممارسة إعدادات الأمان في بيئة آمنة.",
+    "activeSession": "جلسة مختبر نشطة",
+    "close": "إغلاق المختبر",
+    "securityNotice": "هذه بيئة رملية آمنة. جميع الإجراءات معزولة.",
+    "virtualLabTitle": "بيئة المختبر الافتراضي",
+    "loadingEnvironment": "جاري تحميل بيئة المختبر...",
+    "instructions": "اتبع التعليمات في بيئة المختبر لإكمال التمارين. سيتم حفظ تقدمك تلقائيًا."
+  },
+  "status": {
+    "gpuPrice": "سعر GPU",
+    "corePrice": "سعر CORE",
+    "highPerf": "أداء عالي",
+    "bestStock": "أفضل سهم"
+  },
+  "profile": {
+    "name": "الاسم",
+    "position": "المنصب",
+    "progress": "تقدم الذكاء الاصطناعي",
+    "contact": "الاتصال",
+    "actionTracking": "تتبع الإجراءات",
+    "duty": "المهمة",
+    "movementTrend": "اتجاه الحركة",
+    "dataStats": "إحصائيات البيانات",
+    "illustration": "الرسم التوضيحي",
+    "dataDelivery": "تسليم البيانات"
+  }
+}
