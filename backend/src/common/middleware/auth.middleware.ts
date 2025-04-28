@@ -6,5 +6,5 @@ export const Authorize = () => expressjwt({
     algorithms: ['HS256'],
     requestProperty: 'auth',
     // TODO: Add more validation
-}).unless({ path: [/^\/api\/auth\/.*/]})
+}).unless({ path: [/^\/api\/auth\/.*/,  /^\/api\/frame\/.*/]})
 

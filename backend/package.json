@@ -50,6 +50,7 @@
     "objection-unique": "^1.2.2",
     "objection-visibility": "^1.2.0",
     "pg": "^8.13.1",
+    "socket.io": "^4.8.1",
     "ws": "^8.18.1"
   }
 }

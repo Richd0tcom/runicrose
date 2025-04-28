@@ -16,17 +16,24 @@
   <script>
     const term = new Terminal();
     term.open(document.getElementById('terminal'));
-    const socket = new WebSocket("ws://localhost:3001");
+    term.focus();
+    document.getElementById('terminal').addEventListener('click', () => {
+        term.focus();
+      });
+    const socket = new WebSocket("ws://localhost:7321/api/frame");
 
     socket.onopen = () => {
       term.write("Connected to REPL\r\n");
     };
+    
 
     socket.onmessage = (e) => {
+        console.lo("socket message : ", e.data)
       term.write(e.data);
     };
 
     term.onData((data) => {
+        console.log(data)
       socket.send(data);
     });
   </script>

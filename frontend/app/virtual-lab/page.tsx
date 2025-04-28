@@ -69,7 +69,7 @@ export default function VirtualLabPage() {
                 <ArrowLeft />
               </Button>
             </Link>
-            <h1 className="text-2xl font-bold text-[#18c7fe]">{t("lab.virtualLabTitle")}</h1>
+            <h1 className="text-2xl font-bold text-[#18c7fe]">{t("Nodejs Virtual Lab")}</h1>
           </div>
           <div className="flex items-center gap-2">
             <Button
@@ -112,7 +112,7 @@ export default function VirtualLabPage() {
 
           <iframe
             ref={iframeRef}
-            src="about:blank" // Replace with your actual iframe URL
+            src="http://localhost:7321/terminal.html" // Replace with your actual iframe URL
             className="w-full h-full"
             title="Virtual Lab Environment"
             sandbox="allow-scripts allow-same-origin allow-forms"

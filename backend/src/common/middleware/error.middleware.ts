@@ -3,6 +3,7 @@ import { BaseError } from '../../utils/errors';
 
 export const errorHandlingMiddleware =  (error: Error, req: Request, res: Response, next: NextFunction) => {
   console.log("I ran")
+  console.log("error baackend: ", req.url)
     if (error instanceof BaseError) {
       res.status(error.status)
         .send({
