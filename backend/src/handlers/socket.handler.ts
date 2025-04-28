@@ -2,53 +2,83 @@ import { IncomingMessage } from "http";
 import { wss } from "../app";
 
 import Docker from "dockerode"
-import { WebSocket } from "ws";
-import { Buffer } from "node:buffer"
+import { PassThrough } from "node:stream";
 
 const docker = new Docker()
 
 
-// wss.on("connection", async (ws, req: IncomingMessage)=> {
-//     console.log("user connection: ", ws.url)
-//     try {
-//         const container = await docker.createContainer({
-//             Image: "node-repl-lab",
-//             Cmd: ["node"],
-//             Tty: true,
-//             OpenStdin: true,
-//             StdinOnce: false,
-//             name: `repl_${(Math.random() * 300)}`,
-//         })
+wss.on("connection", async (ws, req: IncomingMessage)=> {
+    console.log("user connection: ", req.url)
+    try {
+        const container = await docker.createContainer({
+            Image: "node-repl-lab",
+            Cmd: ["node"],
+            Tty: true,
+            // AttachStdin: true,
+            OpenStdin: true,
+            StdinOnce: false,
+            name: `repl_${Math.floor(Math.random() * 300)}`,
+        })
 
-//         await container.start()
+        await container.start()
 
-//         const stream =  await container.attach({
-//             stderr: true,
-//             stdin: true,
-//             stdout: true,
-//             stream: true
-//         })
+        const stream =  await container.attach({
+            stderr: true,
+            stdin: true,
+            stdout: true,
+            stream: true,
+            hijack: true
+        })
 
-//         container.modem.demuxStream(stream, ws, ws)
+        stream.write("console.log('Hello from container');\n");
+        // Create output streams that will forward to WebSocket
+        const stdout = new PassThrough()
+        const stderr = new PassThrough()
 
-//         //TODO: handle lab history
+        // container.modem.demuxStream(stream, ws, ws)
 
-//         ws.on("message", (msg)=>{
-//             stream.write(Buffer.from(msg as Buffer))
+        
+        container.modem.demuxStream(stream, stdout, stderr)
 
-//             //store in history
-//         })
+        //TODO: handle lab history
 
-//         ws.on("close", async ()=> {
-//             await container.stop();
-//             await container.remove();
-//         })
-//     } catch (error) {
-//         console.error("WebSocket error:", error);
-//         ws.send("Internal error");
-//         ws.close();
-//     }
-// })
+        stream.on("data", (data)=> {
+            console.log(typeof data)
+            console.log(data.toString())
+            ws.send(data.toString())
+        })
+
+
+        stdout.on("data", (chunk)=>{
+            ws.send(chunk.toString())
+        })
+
+       stderr.on("data", (chunk)=> {
+            ws.send(chunk.toString())
+        })
+        ws.on("message",  (msg)=>{
+            console.log(msg.toString())
+            let input = msg.toString()
+
+            stream.write(input, (e)=>{
+                if (e) console.log("write error: ", e);
+                
+            })
+
+            //store in history
+        })
+
+        ws.on("close", async ()=> {
+            await container.stop();
+            await container.remove();
+        })
+    } catch (error) {
+        console.error("WebSocket error:", error);
+        
+        ws.send("Internal error");
+        ws.close();
+    }
+})
 
 const connectREPL = async(req: Request, res: Response):Promise<any> => {
 
