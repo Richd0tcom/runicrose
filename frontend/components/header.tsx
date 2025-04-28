@@ -51,7 +51,7 @@ export default function Header() {
     })
   }
 
-  const handleLanguageChange = (lang) => {
+  const handleLanguageChange = (lang: any) => {
     changeLanguage(lang)
   }
 

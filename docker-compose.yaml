@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:15
     env_file:
-      - ./.env # Use the same .env file for both services
+      - ./backend/.env # Use the same .env file for both services
     ports:
       - "5432:5432"
     volumes:
@@ -10,8 +10,8 @@ services:
 
   node-api:
     build:
-      context: . #. means this docker-compose is inside the node api home directory, in this scenario, you can even abandon this option.
-      dockerfile: Dockerfile
+      context: . #. means this docker-compose is inside the home directory, in this scenario, you can even abandon this option.
+      dockerfile: /backend/Dockerfile
     ports:
       - "7321:7321"
     depends_on:
@@ -23,6 +23,18 @@ services:
       - .:/app/
       - /app/node_modules
     command: npm run dev
+  
+  lab-frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3002:3002"
+    depends_on:
+      - node-api
+    working_dir: /app/
+    command: npm run dev
+
 
 volumes:
   postgres-data:
